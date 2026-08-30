@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAISAR - Calon Wali Nagari Lingkuang Aua Jambak</title>
+
+<style>
+
+:root{
+  --navy:#071a35;
+  --gold:#e7b52f;
+  --soft:#f5f7fa;
+  --ink:#172033;
+  --muted:#667085;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#f7f9fc,#eef3f8);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+header{
+  background:var(--navy);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 4px 18px #0003;
+}
+
+.nav{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.logo small{
+  display:block;
+  font-size:9px;
+  color:#f4d46d;
+  letter-spacing:1px;
+}
+
+.menu{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  padding:9px 12px;
+  border-radius:8px;
+  font-weight:700;
+  transition:.2s;
+}
+
+/* BERANDA AKTIF */
+.menu a:hover,
+.menu a.active{
+  background:#ffffff18;
+  color:#f4d46d;
+}
+
+
+/* =================================
+   HERO
+   ================================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  padding:55px 0 65px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(229,181,47,.20),
+      transparent 28%
+    ),
+    linear-gradient(135deg,#071a35,#164777);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:45px;
+}
+
+.hero-identity{
+  font-size:clamp(18px,2.2vw,30px);
+  font-weight:800;
+  letter-spacing:2px;
+  line-height:1.35;
+  text-align:center;
+}
+
+.hero-identity b{
+  color:#f4d46d;
+}
+
+
+/* =================================
+   NOMOR URUT
+   ================================= */
+
+.hero-number{
+  text-align:center;
+  margin:15px 0 5px;
+}
+
+.hero-number span{
+  display:block;
+  font-size:clamp(15px,1.8vw,22px);
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:3px;
+}
+
+.hero-number strong{
+  display:block;
+  font-size:clamp(75px,9vw,125px);
+  line-height:.85;
+  font-weight:900;
+  color:#fff;
+}
+
+
+/* =================================
+   NAMA MAISAR
+   ================================= */
+
+.hero h1{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(62px,8vw,104px);
+  line-height:.95;
+  margin:8px 0 12px;
+  letter-spacing:4px;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 3px 10px #0005;
+}
+
+.hero h2{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(22px,2.7vw,34px);
+  margin:7px 0 16px;
+  line-height:1.25;
+  text-align:center;
+}
+
+.hero h2 b{
+  color:#f4d46d;
+}
+
+.hero p{
+  max-width:570px;
+  margin:0 auto;
+  font-size:15px;
+  text-align:center;
+  color:#dce7f5;
+}
+
+
+/* =================================
+   FOTO HERO
+   ================================= */
+
+.hero-photo{
+  max-width:610px;
+  width:100%;
+  justify-self:end;
+}
+
+.hero-photo img{
+  width:100%;
+  display:block;
+  border-radius:20px;
+  box-shadow:0 18px 50px #0005;
+}
+
+
+/* =================================
+   BUTTON
+   ================================= */
+
+.actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:9px;
+  font-weight:900;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn.gold{
+  background:var(--gold);
+  color:#111;
+}
+
+.btn.outline{
+  border:1px solid #ffffff66;
+  color:#fff;
+}
+
+.btn.outline:hover{
+  background:#ffffff15;
+}
+
+
+/* =================================
+   SECTION
+   ================================= */
+
+section:not(.hero){
+  padding:55px 0;
+}
+
+.title{
+  text-align:center;
+  margin:0 0 30px;
+}
+
+.title small{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:99px;
+  background:#f6edd2;
+  color:#a77b16;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.title h2{
+  font-size:36px;
+  color:var(--navy);
+  margin:7px 0;
+}
+
+
+/* =================================
+   CARD
+   ================================= */
+
+.grid2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #e8ecf1;
+  border-radius:16px;
+  padding:24px;
+  box-shadow:0 8px 28px #00000012;
+}
+
+.card h3{
+  color:var(--navy);
+  margin-top:0;
+}
+
+.quote{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  font-style:italic;
+  font-weight:700;
+  color:#8b6915;
+}
+
+
+/* =================================
+   PROFIL
+   ================================= */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:20px;
+}
+
+.profile-card{
+  background:#fff;
+  border:1px solid #e8ecf1;
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 6px 22px #0000000d;
+}
+
+.profile-card h3{
+  color:var(--navy);
+  font-size:18px;
+}
+
+
+/* =================================
+   NOTE
+   ================================= */
+
+.note{
+  background:#fff;
+  border-left:5px solid var(--gold);
+  padding:18px 20px;
+  border-radius:10px;
+  margin:30px auto;
+  max-width:900px;
+}
+
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer{
+  background:#041125;
+  color:#dbe5f2;
+  text-align:center;
+  padding:28px;
+}
+
+.gold-text{
+  color:#f4d46d;
+}
+
+
+/* =================================
+   TABLET
+   ================================= */
+
+@media(max-width:900px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-photo{
+    justify-self:center;
+    max-width:600px;
+  }
+
+  .profile-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+
+/* =================================
+   HP
+   ================================= */
+
+@media(max-width:700px){
+
+  .menu{
+    display:none;
+  }
+
+  .hero{
+    padding:42px 0 50px;
+  }
+
+  .hero-grid{
+    gap:25px;
+  }
+
+  .hero-identity{
+    font-size:17px;
+    letter-spacing:1.6px;
+  }
+
+  .hero-number span{
+    font-size:15px;
+  }
+
+  .hero-number strong{
+    font-size:88px;
+  }
+
+  .hero h1{
+    font-size:64px;
+  }
+
+  .hero h2{
+    font-size:22px;
+  }
+
+  .grid2{
+    grid-template-columns:1fr;
+  }
+
+  .profile-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+<link rel="stylesheet" href="site.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     HEADER / MENU
+     ================================= -->
+
+<header>
+
+<div class="container nav">
+
+<a class="logo" href="index.html">
+MAISAR
+<small>LINGKUANG AUA JAMBAK</small>
+</a>
+
+<nav class="menu" aria-label="Navigasi utama">
+<a class="active" href="index.html">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="visi-misi.html">Visi &amp; Misi</a>
+<a href="program.html">Program</a>
+<a href="kegiatan.html">Kegiatan</a>
+<a href="sekapur-sirih.html">Sekapur Sirih</a>
+<a href="kumpulan-pantun.html">Kumpulan Pantun</a>
+<a href="musik.html">🎵 Musik</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =================================
+     BERANDA / HERO
+     ================================= -->
+
+<section class="hero" id="beranda">
+
+<div class="container hero-grid">
+
+
+<div>
+
+
+<div class="hero-identity">
+
+CALON WALI NAGARI
+
+<br>
+
+<b>
+LINGKUANG AUA JAMBAK
+</b>
+
+</div>
+
+
+<div class="hero-number">
+
+<span>
+— NOMOR URUT —
+</span>
+
+<strong>
+2
+</strong>
+
+</div>
+
+
+<h1>
+MAISAR
+</h1>
+
+
+<h2>
+
+Membangun Nagari dengan
+
+<b>
+HATI
+</b>
+
+dan
+
+<b>
+INTEGRITAS
+</b>
+
+</h2>
+
+
+<p>
+Website informasi pencalonan MAISAR
+untuk Nagari Lingkuang Aua Jambak.
+</p>
+
+
+<div class="actions">
+
+<a class="btn gold" href="profil.html">
+Profil Lengkap
+</a>
+
+<a class="btn outline" href="program.html">
+Program Unggulan
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="hero-photo">
+
+<img
+src="assets/visi-misi-poster.png"
+alt="Poster MAISAR - Nomor Urut 2, Calon Wali Nagari Lingkuang Aua Jambak"
+>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     PROFIL SINGKAT
+     ================================= -->
+
+<section id="profil">
+
+<div class="container">
+
+<div class="title">
+
+<small>
+TENTANG MAISAR
+</small>
+
+<h2>
+Profil Singkat
+</h2>
+
+</div>
+
+
+<div class="grid2">
+
+
+<div class="card">
+
+<h3>
+MAISAR — Putra Daerah Nagari Lingkuang Aua Jambak
+</h3>
+
+<p>
+Maisar, lahir di Jambak pada tanggal 30 Mei 1977,
+merupakan putra dari pasangan Mansyur dan Salmawati.
+Ia tumbuh dan besar di tengah masyarakat Nagari
+Lingkuang Aua Jambak, sehingga memiliki pemahaman
+yang kuat terhadap kondisi sosial, budaya, adat istiadat,
+serta kebutuhan masyarakat nagari.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="quote">
+
+“Bersama Masyarakat, Membangun Nagari yang Maju,
+Sejahtera, Berkeadilan, dan Bermartabat.”
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="profile-grid">
+
+
+<div class="profile-card">
+
+<h3>
+Data Keluarga
+</h3>
+
+<p>
+Menikah dengan Rohima dan dikaruniai dua orang putra:
+Muhammad Aldi Arrahman dan Muhammad Taufik Gurohman.
+</p>
+
+</div>
+
+
+<div class="profile-card">
+
+<h3>
+Pendidikan
+</h3>
+
+<p>
+SD Inpres No. 6/80 Bandarjo Selatan,
+SMP Negeri Simpang Empat,
+dan SMA Negeri Simpang Empat.
+</p>
+
+</div>
+
+
+<div class="profile-card">
+
+<h3>
+Pengalaman Kerja &amp; Pemerintahan Nagari
+</h3>
+
+<ul>
+
+<li>
+Karyawan Koperasi Perkebunan Sawit Perintis (2000–2014).
+</li>
+
+<li>
+Kepala Jorong Jambak dan anggota Bamus Nagari Lingkuang Aua.
+</li>
+
+<li>
+Sekretaris Nagari Lingkuang Aua Jambak sejak 2017 hingga sekarang.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="profile-card">
+
+<h3>
+Organisasi &amp; Pelatihan
+</h3>
+
+<ul>
+
+<li>
+Ketua Forum Komunikasi Perangkat Nagari
+se-Kecamatan Pasaman sejak 2018.
+</li>
+
+<li>
+Wakil Ketua PPDI Kabupaten Pasaman Barat sejak 2023.
+</li>
+
+<li>
+Peningkatan Kapasitas Perangkat Nagari (2016),
+Seminar Desa Digital (2025),
+dan Pelatihan Paralegal (2026).
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="note">
+
+Berbekal pengalaman dalam pemerintahan nagari,
+organisasi kemasyarakatan, dan kehidupan sosial masyarakat,
+MAISAR berkomitmen membangun Nagari Lingkuang Aua Jambak
+yang maju, mandiri, transparan, dan sejahtera.
+
+</div>
+
+
+<div class="actions">
+
+<a class="btn gold" href="profil.html">
+
+Lihat Profil Lengkap →
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     FOOTER
+     ================================= -->
+
+<footer>
+
+© 2026 MAISAR —
+
+<span class="gold-text">
+Membangun Nagari dengan HATI dan INTEGRITAS
+</span>
+
+</footer>
+
+
+</body>
+</html>

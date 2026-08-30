@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visi & Misi - Maisar | Calon Wali Nagari</title>
+<style>
+:root {
+  --navy:#061735; --navy2:#0b2858; --gold:#dca92e; --gold2:#f2c85a;
+  --white:#fff; --cream:#f8f4e9; --text:#eef3ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#020b1c;color:var(--white);font-family:Arial,Helvetica,sans-serif}
+.page{width:min(1180px,100%);min-height:100vh;margin:auto;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 12% 20%,#16366b 0 2px,transparent 3px),
+ linear-gradient(110deg,#061735 0%,#071a3a 54%,#030c20 100%);}
+.page:before{content:"";position:absolute;inset:0;pointer-events:none;background:
+ repeating-linear-gradient(135deg,transparent 0 28px,rgba(220,169,46,.035) 29px 30px);}
+.top-ornament{height:18px;background:linear-gradient(90deg,#8f6415,#f6d16b,#a87918,#f6d16b,#8f6415)}
+.gold-frame{position:absolute;inset:22px;border:2px solid rgba(220,169,46,.9);border-radius:28px;pointer-events:none}
+.hero{position:relative;display:grid;grid-template-columns:47% 53%;min-height:950px;padding:55px 55px 25px;gap:10px}
+.left{position:relative;z-index:3;padding:8px 18px 0 10px}
+.logo{width:115px;height:115px;object-fit:cover;display:block;margin:0 auto 12px;border-radius:50%}
+.kicker{font-family:Georgia,serif;text-align:center;font-size:34px;line-height:1.02;letter-spacing:1px}
+.name{font-family:Georgia,serif;text-align:center;font-weight:700;font-size:92px;line-height:.95;letter-spacing:5px;color:#efbc36;text-shadow:0 2px 0 #6f4a0d,0 0 16px #e4a62d55;margin:28px 0 18px}
+.tagline{font-family:Georgia,serif;text-align:center;font-size:30px;line-height:1.22;font-style:italic;margin:0 auto 18px;max-width:510px}
+.tagline b{color:var(--gold2);font-style:normal}
+.divider{height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:16px auto 22px;width:78%}
+.card{border:2px solid var(--gold);border-radius:18px;background:linear-gradient(145deg,#071a3a,#081f45);box-shadow:0 12px 30px #0005;overflow:hidden;margin:0 0 16px}
+.card-title{display:flex;align-items:center;gap:15px;font-size:25px;font-weight:900;color:#0b1b3a;padding:0 20px}
+.card-title span{background:var(--gold);padding:10px 25px 11px;border-radius:0 0 18px 18px}
+.card-body{padding:20px 28px 22px;font-size:19px;line-height:1.45}
+.visi .card-body{min-height:120px;display:flex;align-items:center}
+.misi .card-body{padding-top:13px}
+.misi ol{margin:0;padding-left:32px;counter-reset:item}
+.misi li{padding:8px 0 8px 8px;line-height:1.32}
+.misi li::marker{font-weight:900;color:#111;font-size:20px}
+.right{position:relative;z-index:2;min-height:900px;display:flex;align-items:flex-end;justify-content:flex-end}
+.portrait{position:absolute;right:-55px;bottom:-5px;width:690px;height:1070px;object-fit:cover;object-position:center top;filter:saturate(1.03);mask-image:linear-gradient(to right,transparent 0%,black 13%,black 100%);}
+.badge{position:absolute;right:30px;bottom:20px;width:260px;height:210px;object-fit:cover;border-radius:50%;filter:drop-shadow(0 5px 8px #0008)}
+.bottom{position:relative;z-index:5;border-top:2px solid var(--gold);display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:24px 60px 28px;background:#061735}
+.bottom-item{display:flex;align-items:center;justify-content:center;gap:16px;font-size:20px;font-weight:700;line-height:1.15;text-align:left;padding:8px 22px;border-right:1px solid var(--gold)}
+.bottom-item:last-child{border-right:0}
+.icon{width:46px;height:46px;border:3px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:25px;flex:0 0 auto}
+.gold{color:var(--gold2)}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;min-height:auto;padding:40px 25px 20px}
+.left{padding:0}
+.right{min-height:600px;margin-top:10px}
+.portrait{right:-120px;width:600px;height:760px;opacity:.95}
+.badge{right:10px;bottom:15px;width:190px;height:150px}
+.bottom{grid-template-columns:1fr;padding:10px 25px}
+.bottom-item{border-right:0;border-bottom:1px solid #dca92e66;justify-content:flex-start}
+.bottom-item:last-child{border-bottom:0}
+.name{font-size:68px}
+.kicker{font-size:27px}
+.tagline{font-size:24px}
+}
+@media(max-width:520px){
+.gold-frame{inset:8px;border-radius:16px}
+.hero{padding:30px 15px 10px}
+.name{font-size:52px;letter-spacing:3px}
+.kicker{font-size:22px}
+.tagline{font-size:20px}
+.card-body{font-size:16px;padding:16px}
+.card-title{font-size:20px}
+.right{min-height:500px}
+.portrait{right:-120px;width:470px;height:600px}
+.badge{width:150px;height:120px}
+.bottom-item{font-size:17px}
+}
+
+/* Shared V2 navigation + responsive polish */
+body{background:linear-gradient(180deg,#e9eef4,#dfe6ee)}
+.site-nav{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.page{margin-top:18px;border-radius:18px}
+
+.page{border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.22)}.gold-frame{border-radius:24px}.card{box-shadow:0 14px 35px rgba(0,0,0,.20);transition:.2s}.card:hover{transform:translateY(-3px)}
+@media(max-width:900px){.page{border-radius:0;margin-top:0}.gold-frame{inset:12px}.hero{padding:40px 22px 20px}.name{font-size:64px}.tagline{font-size:24px}.right{min-height:540px}.portrait{right:-90px;width:560px;height:700px}.bottom{grid-template-columns:1fr;padding:18px 25px}.bottom-item{border-right:0;border-bottom:1px solid rgba(220,169,46,.35);padding:14px}.bottom-item:last-child{border-bottom:0}}
+
+</style>
+<link rel="stylesheet" href="site.css">
+
+<style>
+.vm-wrap{width:min(1180px,92%);margin:28px auto 45px}.vm-head{text-align:center;background:linear-gradient(135deg,#071a35,#123e72);color:#fff;border:1px solid rgba(229,181,47,.35);border-radius:20px;padding:28px 22px;margin-bottom:24px;box-shadow:0 16px 40px rgba(7,26,53,.16)}.vm-head span{display:inline-block;color:#f6d879;font-weight:900;letter-spacing:2px;font-size:13px}.vm-head h1{margin:8px 0 6px;font-family:Georgia,serif;font-size:clamp(28px,4vw,46px);line-height:1.08}.vm-head h1 b{color:#f6d879}.vm-head p{margin:8px 0 0;color:#dbe7f7;font-size:14px}.vm-poster{display:flex;justify-content:center}.vm-poster img{display:block;width:min(900px,100%);height:auto;border-radius:20px;box-shadow:0 22px 60px rgba(0,0,0,.24);border:2px solid rgba(229,181,47,.65)}@media(max-width:720px){.vm-wrap{width:94%;margin-top:18px}.vm-head{padding:22px 14px}.vm-head h1{font-size:28px}.vm-head p{font-size:12px}.vm-poster img{border-radius:14px}}
+</style>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="site-brand" href="index.html">MAISAR<small>LINGKUANG AUA JAMBAK</small></a>
+    <nav class="site-links" aria-label="Navigasi utama">
+      <a class="" href="index.html">Beranda</a>
+      <a class="" href="profil.html">Profil</a>
+      <a class="active" href="visi-misi.html">Visi &amp; Misi</a>
+      <a class="" href="program.html">Program</a>
+      <a class="" href="kegiatan.html">Kegiatan</a>
+      <a href="sekapur-sirih.html">Sekapur Sirih</a>
+      <a href="kumpulan-pantun.html">Kumpulan Pantun</a>
+      <a href="musik.html">🎵 Musik</a>
+    </nav>
+  </div>
+</header>
+
+<main class="vm-wrap">
+  <div class="vm-head">
+    <span>VISI &amp; MISI</span>
+    <h1>Membangun Nagari dengan <b>HATI</b> dan <b>INTEGRITAS</b></h1>
+    <p>Nagari Lingkuang Aua Jambak • Calon Wali Nagari MAISAR • Nomor Urut 2</p>
+  </div>
+  <div class="vm-poster">
+    <img src="assets/visi-misi-poster.png" alt="Poster Visi dan Misi MAISAR - Calon Wali Nagari Lingkuang Aua Jambak - Nomor Urut 2">
+  </div>
+</main>
+<footer class="site-footer">© 2026 MAISAR — Calon Wali Nagari Lingkuang Aua Jambak<strong>Membangun Nagari dengan HATI dan INTEGRITAS</strong></footer>
+</body>
+</html>
