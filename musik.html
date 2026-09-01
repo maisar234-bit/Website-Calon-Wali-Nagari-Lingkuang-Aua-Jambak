@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Musik - MAISAR Lingkuang Aua Jambak</title>
+
+<style>
+
+:root{
+  --navy:#071a35;
+  --gold:#e7b52f;
+  --soft:#f5f7fa;
+  --ink:#172033;
+  --muted:#667085
+}
+
+*{
+  box-sizing:border-box
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#f7f9fc,#eef3f8);
+  color:var(--ink);
+  line-height:1.6
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+.wrap{
+  width:min(1120px,92%);
+  margin:auto
+}
+
+
+/* ==============================
+   HEADER / MENU
+   ============================== */
+
+header{
+  background:var(--navy);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 4px 18px #0003
+}
+
+.nav{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px
+}
+
+.brand{
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:3px
+}
+
+.brand small{
+  display:block;
+  font-size:9px;
+  color:#f4d46d;
+  letter-spacing:1px
+}
+
+.menu{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap
+}
+
+.menu a{
+  padding:9px 12px;
+  border-radius:8px;
+  font-weight:700
+}
+
+.menu a:hover,
+.menu a.active{
+  background:#ffffff18;
+  color:#f4d46d
+}
+
+
+/* ==============================
+   HERO
+   ============================== */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  padding:55px 0 60px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(229,181,47,.20),
+      transparent 28%
+    ),
+    linear-gradient(135deg,#071a35,#164777)
+}
+
+
+/* ==============================
+   IDENTITAS CALON
+   ============================== */
+
+.campaign-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  line-height:1;
+  margin:0 0 22px 0
+}
+
+.campaign-title .doc-title{
+  font-size:clamp(24px,3vw,38px);
+  font-weight:800;
+  letter-spacing:1.5px;
+  margin-bottom:12px
+}
+
+.campaign-title .candidate-title{
+  font-size:clamp(18px,2.3vw,30px);
+  font-weight:700;
+  letter-spacing:1px;
+  line-height:1.2;
+  margin-bottom:18px
+}
+
+.campaign-title .number-label{
+  font-size:clamp(16px,1.8vw,24px);
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:5px
+}
+
+.campaign-title .number{
+  font-size:clamp(72px,9vw,125px);
+  font-weight:900;
+  line-height:.78;
+  letter-spacing:1px;
+  margin-bottom:12px
+}
+
+.campaign-title .name{
+  font-size:clamp(54px,7vw,96px);
+  font-weight:900;
+  letter-spacing:3px;
+  line-height:.85
+}
+
+
+/* ==============================
+   KETERANGAN HERO
+   ============================== */
+
+.hero p{
+  font-size:18px;
+  color:#dce7f5;
+  max-width:760px;
+  line-height:1.55;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center
+}
+
+
+/* ==============================
+   JUDUL HALAMAN
+   ============================== */
+
+.title{
+  text-align:center;
+  margin:55px 0 30px
+}
+
+.title h2{
+  font-size:36px;
+  color:var(--navy);
+  margin:5px 0
+}
+
+.title small{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:99px;
+  background:#f6edd2;
+  font-weight:900;
+  letter-spacing:2px;
+  color:#a77b16
+}
+
+
+/* ==============================
+   DAFTAR MUSIK
+   ============================== */
+
+.tracks{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  padding-bottom:70px
+}
+
+.track{
+  background:#fff;
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 8px 28px #00000012;
+  border:1px solid #e8ecf1;
+  transition:.2s
+}
+
+.track:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 34px rgba(7,26,53,.13)
+}
+
+.track h3{
+  margin:0 0 7px;
+  color:var(--navy);
+  font-size:19px
+}
+
+.track p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:14px
+}
+
+.track audio{
+  width:100%
+}
+
+
+/* ==============================
+   CATATAN
+   ============================== */
+
+.note{
+  background:#fff;
+  border-left:5px solid var(--gold);
+  padding:18px 20px;
+  border-radius:10px;
+  margin:0 auto 35px;
+  max-width:900px
+}
+
+
+/* ==============================
+   TOMBOL KEMBALI
+   ============================== */
+
+.back{
+  display:inline-block;
+  background:var(--gold);
+  color:#111;
+  padding:12px 18px;
+  border-radius:9px;
+  font-weight:900;
+  margin-bottom:50px;
+  transition:.2s
+}
+
+.back:hover{
+  transform:translateY(-2px)
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer{
+  background:#041125;
+  color:#dbe5f2;
+  text-align:center;
+  padding:28px
+}
+
+.gold{
+  color:#f4d46d
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media(max-width:800px){
+
+  .menu{display:flex !important;}
+
+  .tracks{
+    grid-template-columns:1fr
+  }
+
+}
+
+
+/* ==============================
+   HP
+   ============================== */
+
+@media(max-width:560px){
+
+  .hero{
+    padding:42px 0 48px
+  }
+
+  .campaign-title .doc-title{
+    font-size:24px
+  }
+
+  .campaign-title .candidate-title{
+    font-size:17px;
+    max-width:95%;
+    line-height:1.25
+  }
+
+  .campaign-title .number-label{
+    font-size:15px;
+    letter-spacing:1.5px
+  }
+
+  .campaign-title .number{
+    font-size:78px
+  }
+
+  .campaign-title .name{
+    font-size:58px;
+    letter-spacing:2px
+  }
+
+  .hero p{
+    font-size:16px
+  }
+
+}
+
+
+/* NAVIGASI MENU FINAL - semua halaman, termasuk HP */
+@media(max-width:720px){
+  .menu{
+    display:flex !important;
+    flex:1 1 auto;
+    min-width:0;
+    width:100%;
+    max-width:100%;
+    gap:4px;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden;
+    white-space:nowrap;
+    padding:4px 0;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{
+    flex:0 0 auto;
+    white-space:nowrap;
+    font-size:12px;
+    padding:7px 9px;
+  }
+}
+
+
+
+/* =========================================================
+   PERBAIKAN NAVIGASI HP - KHUSUS FILE INI
+   ========================================================= */
+@media (max-width: 720px) {
+  header {
+    overflow: hidden;
+  }
+
+  header .wrap.nav {
+    width: 100%;
+    min-height: auto;
+    padding: 12px 14px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+    line-height: 1.05;
+  }
+
+  .menu {
+    width: 100%;
+    max-width: 100%;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap;
+    padding: 3px 0 7px;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .menu a {
+    position: relative !important;
+    flex: 0 0 auto !important;
+    display: block;
+    white-space: nowrap !important;
+    padding: 9px 11px 10px !important;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  /* Menu aktif */
+  .menu a.active {
+    color: #f6d879 !important;
+    background: rgba(255,255,255,.10) !important;
+  }
+
+  /* Garis emas yang jelas di bawah menu aktif */
+  .menu a.active::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    right: 9px;
+    bottom: 2px;
+    height: 3px;
+    border-radius: 4px;
+    background: #f6d879;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu a:not(.active)::after {
+    content: none !important;
+  }
+}
+
+</style>
+
+<link rel="stylesheet" href="site.css">
+
+</head>
+
+<body>
+
+
+<!-- ==============================
+     HEADER
+     ============================== -->
+
+<header>
+
+<div class="wrap nav">
+
+<a class="brand" href="index.html">
+  MAISAR
+  <small>LINGKUANG AUA JAMBAK</small>
+</a>
+
+<nav class="menu">
+<a href="index.html">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="visi-misi.html">Visi &amp; Misi</a>
+<a href="program.html">Program</a>
+<a href="kegiatan.html">Kegiatan</a>
+<a href="sekapur-sirih.html">Sekapur Sirih</a>
+<a href="kumpulan-pantun.html">Kumpulan Pantun</a>
+<a class="active" href="musik.html">🎵 Musik</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ==============================
+     HERO
+     ============================== -->
+
+<section class="hero">
+
+<div class="wrap">
+
+<div class="campaign-title">
+
+<div class="doc-title">
+  DOKUMENTASI MUSIK
+</div>
+
+<div class="candidate-title">
+  CALON WALI NAGARI LINGKUANG AUA JAMBAK
+</div>
+
+<div class="number-label">
+  NOMOR URUT
+</div>
+
+<div class="number">
+  2
+</div>
+
+<div class="name">
+  MAISAR
+</div>
+
+</div>
+
+
+<p>
+  Irama perjuangan dan semangat kebersamaan
+  Maisar Lingkuang Aua Jambak.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     ISI HALAMAN
+     ============================== -->
+
+<main class="wrap">
+
+
+<div class="title">
+
+<small>
+  IRAMA PERJUANGAN
+</small>
+
+<h2>
+  Lagu-Lagu Terkait Pencalonan
+</h2>
+
+</div>
+
+
+<!-- ==============================
+     DAFTAR LAGU
+     ============================== -->
+
+<div class="tracks">
+
+
+
+<div class="track">
+
+<h3>
+  MAISAR NOMOR URUT DUA
+</h3>
+
+<p>
+  MAISAR NOMOR URUT DUA.mp3
+</p>
+
+<audio controls preload="metadata">
+
+<source
+  src="assets/MAISAR NOMOR URUT DUA.mp3"
+  type="audio/mpeg">
+
+Browser Anda tidak mendukung pemutar audio.
+
+</audio>
+
+</div>
+
+
+<div class="track">
+
+<h3>
+  Pilih Maisar.2
+</h3>
+
+<p>
+  Pilih Maisar.2.mp3
+</p>
+
+<audio controls preload="metadata">
+
+<source
+  src="assets/Pilih Maisar.2.mp3"
+  type="audio/mpeg">
+
+Browser Anda tidak mendukung pemutar audio.
+
+</audio>
+
+</div>
+
+
+<div class="track">
+
+<h3>
+  PILIH MAISAR
+</h3>
+
+<p>
+  PILIH MAISAR.mp3
+</p>
+
+<audio controls preload="metadata">
+
+<source
+  src="assets/PILIH MAISAR.mp3"
+  type="audio/mpeg">
+
+Browser Anda tidak mendukung pemutar audio.
+
+</audio>
+
+</div>
+
+
+<div class="track">
+
+<h3>
+  Melangkah Bersama Maisar
+</h3>
+
+<p>
+  (regge) MELANGKAH BERSAMA MAISAR.mp3
+</p>
+
+<audio controls preload="metadata">
+
+<source
+  src="assets/(regge) MELANGKAH BERSAMA MAISAR.mp3"
+  type="audio/mpeg">
+
+Browser Anda tidak mendukung pemutar audio.
+
+</audio>
+
+</div>
+
+
+<div class="track">
+
+<h3>
+  Maisar Pilihan Kita
+</h3>
+
+<p>
+  (remixs) MAISAR PILIHAN KITA.mp3
+</p>
+
+<audio controls preload="metadata">
+
+<source
+  src="assets/(remixs) MAISAR PILIHAN KITA.mp3"
+  type="audio/mpeg">
+
+Browser Anda tidak mendukung pemutar audio.
+
+</audio>
+
+</div>
+
+
+<div class="track">
+
+<h3>
+  Bersatu Membangun Nagari
+</h3>
+
+<p>
+  (regge) BERSATU MEMBANGUN NAGARI.mp3
+</p>
+
+<audio controls preload="metadata">
+
+<source
+  src="assets/(regge) BERSATU MEMBANGUN NAGARI.mp3"
+  type="audio/mpeg">
+
+Browser Anda tidak mendukung pemutar audio.
+
+</audio>
+
+</div>
+
+
+</div>
+
+
+<!-- ==============================
+     CATATAN
+     ============================== -->
+
+<div class="note">
+
+<b>Catatan:</b>
+
+Lagu-lagu di atas menggunakan file audio
+yang memang tersedia di folder assets website, termasuk lagu MAISAR NOMOR URUT DUA.
+
+</div>
+
+
+<!-- ==============================
+     KEMBALI
+     ============================== -->
+
+<a class="back" href="index.html">
+  ← Kembali ke Beranda
+</a>
+
+
+</main>
+
+
+<!-- ==============================
+     FOOTER
+     ============================== -->
+
+<footer>
+
+© 2026 MAISAR —
+
+<span class="gold">
+  Membangun Nagari dengan HATI dan INTEGRITAS
+</span>
+
+</footer>
+
+
+<script>
+(function(){
+  const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  document.querySelectorAll('.menu a[href]').forEach(function(a){
+    const raw=a.getAttribute('href')||'';
+    const file=raw.split('#')[0].split('?')[0].split('/').pop().toLowerCase()||'index.html';
+    if(file===current){
+      a.classList.add('active');
+      a.setAttribute('aria-current','page');
+      setTimeout(function(){try{a.scrollIntoView({behavior:'auto',block:'nearest',inline:'center'});}catch(e){}},30);
+    } else { a.classList.remove('active'); a.removeAttribute('aria-current'); }
+    a.removeAttribute('target');
+    a.removeAttribute('rel');
+    a.addEventListener('click',function(e){
+      if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey) return;
+      if(!raw || raw.charAt(0)==='#') return;
+      e.preventDefault();
+      // Ganti halaman menu tanpa menambah riwayat browser.
+      window.location.replace(a.href);
+    });
+  });
+})();
+</script>
+</body>
+</html>
